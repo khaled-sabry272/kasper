@@ -1,4 +1,4 @@
-/*varaibal*/
+/*######### varaibal ###########*/
 
 :root {
     --main-color: #19c8fe;
@@ -8,30 +8,32 @@
 }
 
 
-/*varaibal*/
+/*######### varaibal ###########*/
 
 
-/* start scorll */
+/*######### start scorll ######### */
 
 
 /* width */
 
 ::-webkit-scrollbar {
-    width: 5px;
-    border-radius: 25px;
+    width: 8px;
 }
 
 
 /* Track */
 
  ::-webkit-scrollbar-track {
-    background: var(--header-p-color);
+    /* background: var(--header-p-color); */
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 25px;
 }
 
 
 /* Handle */
 
  ::-webkit-scrollbar-thumb {
+    border-radius: 25px;
     background: var(--main-color);
 }
 
@@ -46,7 +48,7 @@
 /* End scorll */
 
 
-/*start global roles */
+/* ######### start global roles ######### */
 
 * {
     -moz-box-sizing: border-box;
@@ -62,6 +64,11 @@ html {
 
 body {
     font-family: "open sans", sans-serif;
+}
+
+::selection {
+    color: black;
+    background-color: var(--main-color);
 }
 
 ul {
@@ -1260,8 +1267,27 @@ header .container nav .form i {
 footer {
     padding-top: 40px;
     padding-bottom: 20px;
-    background-color: rgb(251, 240, 240);
+    background-color: rgb(218, 215, 215);
     margin-top: 45px;
+    position: relative;
+}
+
+footer::after {
+    content: "";
+    width: 100%;
+    height: 5px;
+    background-color: #19c8fe;
+    position: absolute;
+    bottom: 0;
+}
+
+footer::before {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #19c8fe;
+    position: absolute;
+    top: 0;
 }
 
 footer .container .info {
@@ -1287,6 +1313,7 @@ footer .container .info h4:nth-of-type(1)::before {
     bottom: -19px;
     transform: translatex(-7%);
     left: 35%;
+    color: white;
 }
 
 footer .container .info i {
